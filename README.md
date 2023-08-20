@@ -40,5 +40,5 @@ I am still developing this app by adding blog articles, APODs and a few more exc
 
 ## Author
 Priya
-- [GitHub] (https://github.com/Priya-git21)
-- [LinkedIn] (https://www.linkedin.com/in/priya-makkar-851973223/)
+- [GitHub](https://github.com/Priya-git21)
+- [LinkedIn](https://www.linkedin.com/in/priya-makkar-851973223/)
