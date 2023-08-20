@@ -23,7 +23,7 @@ Cosmic Chronicles for astrophiles, crafted with Bootstrap and ReactJS, seamlessl
 - Flexbox
 - Bootstrap
 - [React](https://reactjs.org/) - JS library
-- [API] (https://api.spaceflightnewsapi.net/v3/articles) - Space News API
+- [API](https://api.spaceflightnewsapi.net/v3/articles) - Space News API
 
 ### What I learned
 I learned how to use class based components in react js, bootstrap, usage of api to fetch data, rendering, routing different components in react app, creating responsive design in react app using CSS + Javascript, vercel deployment of react apps, and many more little things required to build app... 
