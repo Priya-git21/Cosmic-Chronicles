@@ -1,0 +1,7 @@
+body {
+    background: url(../public/background.jpg) center center/cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    color:white;
+}

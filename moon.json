@@ -1,0 +1,19 @@
+{
+    "format": "png",
+    "style": {
+        "moonStyle": "sketch",
+        "backgroundStyle": "stars",
+        "backgroundColor": "red",
+        "headingColor": "white",
+        "textColor": "red"
+    },
+    "observer": {
+        "latitude": 6.56774,
+        "longitude": 79.88956,
+        "date": "2020-11-01"
+    },
+    "view": {
+        "type": "portrait-simple",
+        "orientation": "south-up"
+    }
+}
