@@ -13,7 +13,7 @@ export default class NewsItem extends Component {
         <div className="my-3 border-white">
           <div className="card custom-bg-gradient text-white color border-white list-group" style={{ width: "18rem", height: "510px", borderRadius: "16px" }}>
             <div className="h-40">
-              <img src={images ? images : defaultImageUrl} className="card-img-top" style={{ height: "200px", objectFit: "cover", borderRadius: "16px" }} />
+              <img src={images ? images : defaultImageUrl} alt='' className="card-img-top" style={{ height: "200px", objectFit: "cover", borderRadius: "16px" }} />
             </div>
             <div className="card-body h-40 overflow-hidden">
               <h5 className="card-title">{title}</h5>

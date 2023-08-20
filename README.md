@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Cosmic Chronicles
+- ReactJS, Bootstrap, API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Links
+https://cosmic-chronicles-one.vercel.app
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Links](#links)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Useful resources](#useful-resources)
+- [Author](#author)
 
-### `npm start`
+## Overview
+Cosmic Chronicles for astrophiles, crafted with Bootstrap and ReactJS, seamlessly integrating astrophiles enthusiasts with the cosmos. Integrating with an API, it seamlessly fetches latest astronomy news, blogs and captivating APOD (astronomy photo of the day), displaying them in an interactive and user-friendly layout with external links to visit the original articles. Site offers responsive design, fast-loading experience, dark theme enhancing the stargazing experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Built with
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Bootstrap
+- [React](https://reactjs.org/) - JS library
+- [API] (https://api.spaceflightnewsapi.net/v3/articles) - Space News API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What I learned
+I learned how to use class based components in react js, bootstrap, usage of api to fetch data, rendering, routing different components in react app, creating responsive design in react app using CSS + Javascript, vercel deployment of react apps, and many more little things required to build app... 
 
-### `npm test`
+### Continued development
+I am still developing this app by adding blog articles, APODs and a few more exciting features...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Useful resources
+- W3schools (https://www.w3schools.com/)
+- MDN web Docs (https://developer.mozilla.org/en-US/)
+- ReactJS (https://reactjs.org/)
+- Bootstrap (https://getbootstrap.com/)
+- Space news API (https://api.spaceflightnewsapi.net/v3/articles)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Priya
+- [GitHub] (https://github.com/Priya-git21)
+- [LinkedIn] (https://www.linkedin.com/in/priya-makkar-851973223/)
