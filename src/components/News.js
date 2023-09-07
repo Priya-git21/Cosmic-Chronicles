@@ -71,7 +71,7 @@ export default class News extends Component {
       <div className="container my-3">
         <h1 className="font">Latest Updates</h1>
         {loading && (
-          <div  style={{ color: "white", fontSize:"20px" }}>Loading...</div>
+          <div style={{ color: "white", fontSize: "20px" }}>Loading...</div>
         )}
 
         <div className="row">

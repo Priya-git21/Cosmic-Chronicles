@@ -1,5 +1,5 @@
 import React from 'react';
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ScrollToTopLink from "./ScrollToTopLink";
 import BlogData from './BlogData.json';
 import './BlogPost.css'
@@ -17,8 +17,10 @@ function BlogPost() {
     return (
       <div className="post container my-3">
         <h1 className="font">Blog Post not found</h1>
-        <ScrollToTopLink to="/blogs" className="btn btn-primary">
-          Back to Astro Blogs
+        <ScrollToTopLink to="/blogs">
+          <button className="btn btn-outline-primary card-link">
+            Back to Astro Blogs
+          </button>
         </ScrollToTopLink>
       </div>
     );
@@ -58,8 +60,10 @@ function BlogPost() {
           </div>
         </div>
       ))}
-      <ScrollToTopLink to="/blogs" className="btn btn-outline-primary card-link">
-        Back to Astro Blogs
+      <ScrollToTopLink to="/blogs">
+        <button className="btn btn-outline-primary card-link">
+          Back to Astro Blogs
+        </button>
       </ScrollToTopLink>
     </div>
   );

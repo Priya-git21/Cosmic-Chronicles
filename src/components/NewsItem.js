@@ -36,11 +36,8 @@ export default class NewsItem extends Component {
               ) : null}
             </div>
             <div className="card-body card-dark">
-              <button
-                type="button"
-                href={readMore}
-                className="btn btn-outline-primary card-link"
-              >
+
+             
                 <ScrollToTopLink
                   to={isBlog ? readMore : { pathname: readMore, state: { isExternalLink: true } }}
                   onClick={(e) => {
@@ -51,9 +48,14 @@ export default class NewsItem extends Component {
                   }}
                   className="card-link text-decoration-none"
                 >
+                   <button
+                type="button"
+                href={readMore}
+                className="btn btn-outline-primary card-link"
+              >
                   Read More
-                </ScrollToTopLink>
               </button>
+                </ScrollToTopLink>
             </div>
             {isBlog === "false" && <div
               className="card-footer bg-black border-secondary custom-bg-secondary"
