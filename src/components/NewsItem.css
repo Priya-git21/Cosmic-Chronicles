@@ -1,9 +1,8 @@
 .custom-bg-gradient {
   background-image: linear-gradient(rgb(44, 41, 41), rgb(3, 3, 3));
-    /* background-color: #000000; Replace with your desired black color */
   }
   
 .custom-bg-secondary {
-    background-color: #1f1f1f; /* Replace with your desired black color */
+    background-color: #484747;
   }
   

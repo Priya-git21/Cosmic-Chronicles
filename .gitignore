@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# .json files
+API_example.json
+API_tut.json
+apod.json
+moon_API.json
+solarSystem.json

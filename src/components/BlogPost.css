@@ -1,0 +1,48 @@
+.post {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(10px);
+    width: 80vw;
+    border: 2px solid white;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.custom-image {
+    border-radius: 8px;
+    border: 0.5px solid rgb(197, 197, 197);
+    margin: 20px;
+}
+
+.content {
+    color: rgb(190, 194, 199);
+    font-family: 'Cosmic Sans MZ', cursive;
+    font-size: 16px;
+}
+
+/* Your external CSS file (e.g., custom.css) */
+
+/* Define a custom bullet style */
+.custom-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding-left: 30px;
+    background: url('../../public/1476.png') no-repeat left top;
+    background-size: 16px 16px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .post  {
+        font-size: 12px;
+    }
+}

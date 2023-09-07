@@ -21,10 +21,10 @@ Cosmic Chronicles for astrophiles, crafted with Bootstrap and ReactJS, seamlessl
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Bootstrap
+- [Bootstrap](https://getbootstrap.com/)
 - [React](https://reactjs.org/) - JS library
-- [API] (https://api.spaceflightnewsapi.net/v3/articles) - Space News API
-
+- [API](https://api.spaceflightnewsapi.net/v3/articles) - Space News API
+- [APOD](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY) - APOD NASA API
 ### What I learned
 I learned how to use class based components in react js, bootstrap, usage of api to fetch data, rendering, routing different components in react app, creating responsive design in react app using CSS + Javascript, vercel deployment of react apps, and many more little things required to build app... 
 
@@ -37,8 +37,8 @@ I am still developing this app by adding blog articles, APODs and a few more exc
 - ReactJS (https://reactjs.org/)
 - Bootstrap (https://getbootstrap.com/)
 - Space news API (https://api.spaceflightnewsapi.net/v3/articles)
-
+- APOD NASA API (https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY) 
 ## Author
 Priya
-- [GitHub] (https://github.com/Priya-git21)
-- [LinkedIn] (https://www.linkedin.com/in/priya-makkar-851973223/)
+- [GitHub](https://github.com/Priya-git21)
+- [LinkedIn](https://www.linkedin.com/in/priya-makkar-851973223/)

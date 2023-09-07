@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NewsItem from './NewsItem';
-import Spinner from './spinner';
 import './News.css';
 
 export default class News extends Component {
@@ -38,17 +37,18 @@ export default class News extends Component {
     }
   }
 
-  // Function to calculate the time difference in hours and minutes
   calculateTimeDifference(updatedAt) {
     const updatedAtDate = new Date(updatedAt);
     const currentDate = new Date();
-    const timeDifference = Math.floor((currentDate - updatedAtDate) / (1000 * 60)); // in minutes
-
-    const hours = Math.floor(timeDifference / 60);
-    const minutes = timeDifference % 60;
-
-    return { hours, minutes };
+    const day = currentDate - updatedAtDate; // Time difference in milliseconds
+  
+    const days = Math.floor(day / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((day % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((day % (1000 * 60 * 60)) / (1000 * 60));
+  
+    return { days, hours, minutes };
   }
+  
 
   // Function to update width based on screen width
   updateWidth() {
@@ -69,22 +69,25 @@ export default class News extends Component {
 
     return (
       <div className="container my-3">
-        <h1 className="font">Cosmic Chronicles- Latest Updates</h1>
-        {loading && <Spinner />}
+        <h1 className="font">Latest Updates</h1>
+        {loading && (
+          <div  style={{ color: "white", fontSize:"20px" }}>Loading...</div>
+        )}
 
         <div className="row">
           {news?.map((element) => {
-            // Calculate the time difference for each news item
-            const { hours, minutes } = this.calculateTimeDifference(element.updatedAt);
+            const { days, hours, minutes } = this.calculateTimeDifference(element.updatedAt);
 
             return (
               <div className={`col-md-${width} border-white mobile`} key={element.url}>
                 <NewsItem
+                  className="NewsItem"
                   title={element.title}
                   description={element.summary}
                   images={element.imageUrl}
                   readMore={element.url}
-                  timeDifference={{ hours, minutes }} // Pass time difference as a prop
+                  timeDifference={{ days, hours, minutes }}
+                  isBlog="false"
                 />
               </div>
             );
