@@ -24,7 +24,11 @@ Cosmic Chronicles for astrophiles, crafted with Bootstrap and ReactJS, seamlessl
 - [Bootstrap](https://getbootstrap.com/)
 - [React](https://reactjs.org/) - JS library
 - [API](https://api.spaceflightnewsapi.net/v3/articles) - Space News API
+<<<<<<< HEAD
 - [APOD](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY) - APOD NASA API
+=======
+
+>>>>>>> 657b9b1124e01291f26985beda954e7655610449
 ### What I learned
 I learned how to use class based components in react js, bootstrap, usage of api to fetch data, rendering, routing different components in react app, creating responsive design in react app using CSS + Javascript, vercel deployment of react apps, and many more little things required to build app... 
 
