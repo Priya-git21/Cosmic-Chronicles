@@ -6,11 +6,11 @@
     border-radius: 16px;
     padding: 30px;
     color: rgb(209, 209, 209);
-    font-family: 'Cosmic Sans MZ', cursive;
+    font-family: 'Cosmic Sans MZ', 'Times New Roman';
 }
 .title{
     font-size: 20px;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Cinzel Decorative', 'Times New Roman';
     font-weight: 500;
     color: white;
 }

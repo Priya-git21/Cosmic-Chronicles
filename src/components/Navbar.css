@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 
 .font {
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Cinzel Decorative', 'Times New Roman';
     font-weight: 500;
     font-size: 40px;
     color: white;
 }
 
 .fontStyle {
-    font-family: 'Cosmic Sans MZ', cursive;
+    font-family: 'Cosmic Sans MZ', 'Times New Roman';
 }
 
 @media only screen and (max-width: 500px) {
@@ -18,7 +18,7 @@
         width: 100vw;
     }
     .font {
-        font-family: 'Cinzel Decorative', cursive;
+        font-family: 'Cinzel Decorative', 'Times New Roman';
         font-weight: 500;
         font-size: 36px;
         color: white;
