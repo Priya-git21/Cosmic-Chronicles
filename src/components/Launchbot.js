@@ -14,6 +14,15 @@ function Launchbot() {
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
+  const getMonthName = (monthNumber) => {
+    const months = [
+      'January', 'February', 'March', 'April',
+      'May', 'June', 'July', 'August',
+      'September', 'October', 'November', 'December',
+    ];
+    return months[monthNumber - 1] || '';
+  };
+
   const renderTimelineElements = () => {
     if (!Array.isArray(launchData) || launchData.length === 0) {
       console.error('Invalid launchData:', launchData);
@@ -35,20 +44,17 @@ function Launchbot() {
         iconStyle={{ background: 'black',fontSize :"30px" }}
         icon={<IoMdRocket color='white' />}
       >
-        <div >
+        <div>
           <h6 className='vertical-timeline-element-title, font'>{element.name}</h6>
           <p className='vertical-timeline-element-subtitle'>
-            <p>
-              <ul className="custom-list">
-                <li><span className="custom-bold-text">Provider:</span> {element.provider.name}</li>
-                <li><span className="custom-bold-text">Vehicle:</span> {element.vehicle.name}</li>
-                <li><span className="custom-bold-text">Launch Pad:</span> {element.pad.location.statename}, {element.pad.location.country}</li>
-                <li><span className="custom-bold-text">Date:</span> {element.est_date.day} {element.est_date.month}, {element.est_date.year}</li>
-                <li><span className="custom-bold-text">Mission:</span> {element.missions[0]?.name}</li>
-                <li><span className="custom-bold-text">Launch Description:</span> {element.launch_description}</li>
-              </ul>
-            </p>
-
+            <ul className="custom-list">
+              <li><span className="custom-bold-text">Provider:</span> {element.provider.name}</li>
+              <li><span className="custom-bold-text">Vehicle:</span> {element.vehicle.name}</li>
+              <li><span className="custom-bold-text">Launch Pad:</span> {element.pad.location.statename}, {element.pad.location.country}</li>
+              <li><span className="custom-bold-text">Date:</span> {`${getMonthName(element.est_date.month)} ${element.est_date.day}, ${element.est_date.year}`}</li>
+              <li><span className="custom-bold-text">Mission:</span> {element.missions[0]?.name}</li>
+              <li><span className="custom-bold-text">Launch Description:</span> {element.launch_description}</li>
+            </ul>
           </p>
         </div>
       </VerticalTimelineElement>
