@@ -26,9 +26,6 @@
     font-size: 16px;
 }
 
-/* Your external CSS file (e.g., custom.css) */
-
-/* Define a custom bullet style */
 .custom-list {
     list-style-type: none;
     padding-left: 0;
@@ -42,7 +39,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .post  {
+    .post {
         font-size: 12px;
     }
 }

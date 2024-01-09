@@ -1,5 +1,5 @@
 .apod {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: saturate(180%) blur(10px);
     width: 80vw;
     border: 1px solid white;
@@ -8,15 +8,17 @@
     color: rgb(209, 209, 209);
     font-family: 'Cosmic Sans MZ', 'Times New Roman';
 }
-.title{
+
+.title {
     font-size: 20px;
     font-family: 'Cinzel Decorative', 'Times New Roman';
     font-weight: 500;
     color: white;
 }
-.potd{
+
+.potd {
     width: 100%;
-    margin-bottom:20px;
-    border-radius:16px;
-    border:1px solid black;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    border: 1px solid black;
 }

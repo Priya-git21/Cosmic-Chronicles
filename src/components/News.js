@@ -19,14 +19,24 @@ export default class News extends Component {
       .then((data) => this.setState({ news: data }));
     this.setState({ loading: false });
 
-    // Call the function to update width based on screen width
     this.updateWidth();
-    // Add an event listener for the resize event using an arrow function
     window.addEventListener('resize', () => this.updateWidth());
   }
 
+  updateWidth() {
+    const screenWidth = window.innerWidth;
+    let newWidth = 4;
+
+    if (screenWidth <= 1000 && screenWidth >= 780) {
+      newWidth = 6;
+    } else if (screenWidth < 780) {
+      newWidth = 8;
+    }
+
+    this.setState({ width: newWidth });
+  }
+
   componentWillUnmount() {
-    // Clean up the event listener on component unmount
     window.removeEventListener('resize', () => this.updateWidth());
   }
 
@@ -48,21 +58,6 @@ export default class News extends Component {
   
     return { days, hours, minutes };
   }
-  
-
-  // Function to update width based on screen width
-  updateWidth() {
-    const screenWidth = window.innerWidth;
-    let newWidth = 4; // Default value for device width greater than 800px
-
-    if (screenWidth <= 1000 && screenWidth >= 780) {
-      newWidth = 6; // Set to 6 for width between 800px and 500px
-    } else if (screenWidth < 780) {
-      newWidth = 8; // Set to 8 for width less than 500px
-    }
-
-    this.setState({ width: newWidth });
-  }
 
   render() {
     const { news, loading, width } = this.state;
@@ -70,9 +65,9 @@ export default class News extends Component {
     return (
       <div className="container my-3">
         <h1 className="font">Latest Updates</h1>
-        {loading && (
+        {/* {loading && (
           <div style={{ color: "white", fontSize: "20px" }}>Loading...</div>
-        )}
+        )} */}
 
         <div className="row">
           {news?.map((element) => {

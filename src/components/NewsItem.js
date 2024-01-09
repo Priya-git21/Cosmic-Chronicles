@@ -3,12 +3,16 @@ import ScrollToTopLink from "./ScrollToTopLink";
 import './NewsItem.css';
 
 export default class NewsItem extends Component {
-  
+
   render() {
     const { title, description, images, readMore, timeDifference, isBlog } = this.props;
 
     const defaultImageUrl =
       'https://c4.wallpaperflare.com/wallpaper/438/143/772/launch-dark-rocket-launching-wallpaper-preview.jpg';
+    const handleImageError = (event) => {
+      event.target.src = { defaultImageUrl };
+    };
+
 
     return (
       <>
@@ -21,6 +25,7 @@ export default class NewsItem extends Component {
               <img
                 src={images ? images : defaultImageUrl}
                 alt=""
+                onError={handleImageError}
                 className="card-img-top"
                 style={{
                   height: '200px',
@@ -29,33 +34,35 @@ export default class NewsItem extends Component {
                 }}
               />
             </div>
-            <div className="card-body h-40 overflow-hidden">
+            <div className="card-body h-50 overflow-hidden">
               <h5 className="card-title">{title}</h5>
               {description && description.length > 0 ? (
                 <p className="card-text">{description.slice(0, 200)}</p>
-              ) : null}
+              ) : <small className="fw-lighter, fst-italic">
+                <br />
+                No summary provided by news panel, please read full article from the link below.
+              </small>}
             </div>
             <div className="card-body card-dark">
 
-             
-                <ScrollToTopLink
-                  to={isBlog ? readMore : { pathname: readMore, state: { isExternalLink: true } }}
-                  onClick={(e) => {
-                    if (isBlog === "false") {
-                      e.preventDefault();
-                      window.open(readMore, '_blank');
-                    }
-                  }}
-                  className="card-link text-decoration-none"
-                >
-                   <button
-                type="button"
-                href={readMore}
-                className="btn btn-outline-primary card-link"
+              <ScrollToTopLink
+                to={isBlog ? readMore : { pathname: readMore, state: { isExternalLink: true } }}
+                onClick={(e) => {
+                  if (isBlog === "false") {
+                    e.preventDefault();
+                    window.open(readMore, '_blank');
+                  }
+                }}
+                className="card-link text-decoration-none"
               >
+                <button
+                  type="button"
+                  href={readMore}
+                  className="btn btn-outline-primary card-link"
+                >
                   Read More
-              </button>
-                </ScrollToTopLink>
+                </button>
+              </ScrollToTopLink>
             </div>
             {isBlog === "false" && <div
               className="card-footer bg-black border-secondary custom-bg-secondary"

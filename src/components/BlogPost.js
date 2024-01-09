@@ -7,13 +7,9 @@ import './BlogPost.css'
 function BlogPost() {
   const { id } = useParams();
   const blogId = parseInt(id, 10);
-  const sortedBlogData = BlogData.slice().sort((a, b) => {
-    return a.title.localeCompare(b.title);
-  });
+  const blog = BlogData.find((post) => post.id === blogId);
 
-  const blog = sortedBlogData.find((post) => post.id === blogId);
-
-  if (!blog) {
+  if (blog === false) {
     return (
       <div className="post container my-3">
         <h1 className="font">Blog Post not found</h1>

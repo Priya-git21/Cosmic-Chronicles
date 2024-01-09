@@ -12,7 +12,7 @@ export default class APOD extends Component {
     }
 
     async componentDidMount() {
-        this.setState({ loading: true });
+        this.setState({ loading: false });
         try {
             const response = await fetch(
                 "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
@@ -55,7 +55,7 @@ export default class APOD extends Component {
                         </div>
                         <hr></hr>
                         <div>
-                            <h4 className="title">Copyright:</h4> {apod.copyright}
+                            <h4 className="title">Copyright:</h4> {apod.copyright ? apod.copyright : "NASA APOD"}
                         </div>
                     </div>
                 )}

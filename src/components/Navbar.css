@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 
 .font {
@@ -17,6 +16,7 @@
         height: auto;
         width: 100vw;
     }
+
     .font {
         font-family: 'Cinzel Decorative', 'Times New Roman';
         font-weight: 500;
@@ -26,7 +26,6 @@
 
     .image {
         display: block;
-        /* width: 100%; */
         max-width: 100vw;
         height: auto;
     }

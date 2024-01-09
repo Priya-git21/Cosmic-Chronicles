@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ScrollToTopLink = ({ to, children, ...rest }) => {
   const scrollToTop = (e) => {
     if (rest.onClick) {
-      rest.onClick(e); // Call the provided onClick handler if it exists
+      rest.onClick(e);
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

@@ -8,7 +8,6 @@ export default class Navbar extends Component {
 
     render() {
         // const notify = () => toast("This project section is currently under development. Thank you for your patience!");
-
         return (
             <div className="fontStyle mobile">
                 <nav className="navbar bg-body-tertiary">
@@ -54,6 +53,15 @@ export default class Navbar extends Component {
                             activeClassName="border-white border-bottom-0"
                         >
                             Picture of the Day
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink
+                            to="/launch"
+                            className="nav-link link-light bg-body-tertiary"
+                            activeClassName="border-white border-bottom-0"
+                        >
+                            Launch Bot
                         </NavLink>
                     </li>
                 </ul>

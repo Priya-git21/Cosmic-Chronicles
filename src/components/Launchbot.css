@@ -1,0 +1,15 @@
+.custom-bold-text {
+    font-family: 'Cinzel Decorative', 'Times New Roman';
+}
+
+.custom-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding-left: 30px;
+    background: url('../../public/1476.png') no-repeat left top;
+    background-size: 16px 16px;
+    margin-bottom: 10px;
+}

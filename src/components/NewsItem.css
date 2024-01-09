@@ -1,8 +1,7 @@
 .custom-bg-gradient {
   background-image: linear-gradient(rgb(44, 41, 41), rgb(3, 3, 3));
-  }
-  
+}
+
 .custom-bg-secondary {
-    background-color: #484747;
-  }
-  
+  background-color: #484747;
+}

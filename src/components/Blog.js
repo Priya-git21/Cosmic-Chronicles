@@ -7,7 +7,7 @@ export default class Blog extends Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
+      loading: true,
       width: 4,
     };
   }

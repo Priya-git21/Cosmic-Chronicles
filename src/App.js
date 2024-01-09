@@ -8,6 +8,7 @@ import News from './components/News';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import APOD from './components/APOD';
+import Launchbot from './components/Launchbot';
 import Footer from './components/Footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<BlogPost />} />
         <Route exact path="/apod" element={<APOD />} />
+        <Route exact path="/launch" element={<Launchbot />} />
       </Routes>
       <Footer />
     </div>
