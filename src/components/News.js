@@ -51,11 +51,11 @@ export default class News extends Component {
     const updatedAtDate = new Date(updatedAt);
     const currentDate = new Date();
     const day = currentDate - updatedAtDate; // Time difference in milliseconds
-  
+
     const days = Math.floor(day / (1000 * 60 * 60 * 24));
     const hours = Math.floor((day % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((day % (1000 * 60 * 60)) / (1000 * 60));
-  
+
     return { days, hours, minutes };
   }
 

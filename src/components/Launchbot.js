@@ -41,7 +41,7 @@ function Launchbot() {
         }}
         key={element.id}
         date={<h1 className="font" style={{ color: 'white' }}>{element.date_str}</h1>}
-        iconStyle={{ background: 'black',fontSize :"30px" }}
+        iconStyle={{ background: 'black', fontSize: "30px" }}
         icon={<IoMdRocket color='white' />}
       >
         <div>

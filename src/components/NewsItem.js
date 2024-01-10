@@ -10,7 +10,7 @@ export default class NewsItem extends Component {
     const defaultImageUrl =
       'https://c4.wallpaperflare.com/wallpaper/438/143/772/launch-dark-rocket-launching-wallpaper-preview.jpg';
     const handleImageError = (event) => {
-      event.target.src = { defaultImageUrl };
+      event.target.src = defaultImageUrl;
     };
 
 

@@ -27,6 +27,9 @@ const Footer = () => {
         <li className="nav-item">
           <Link to="/apod">Picture of the Day</Link>
         </li>
+        <li className="nav-item">
+          <Link to="/launch">Launch Bot</Link>
+        </li>
       </ul>
       <div className="footer__socials">
         <Link
