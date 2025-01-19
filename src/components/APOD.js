@@ -5,14 +5,14 @@ export default class APOD extends Component {
     constructor() {
         super();
         this.state = {
-            apod: [],
+            apod: {},
             loading: false,
             width: 4,
         };
     }
 
     async componentDidMount() {
-        this.setState({ loading: false });
+        this.setState({ loading: true });
         try {
             const response = await fetch(
                 "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
@@ -40,11 +40,28 @@ export default class APOD extends Component {
                 ) : (
                     <div className="apod">
                         <h3 className="font">{apod.title}</h3>
-                        <img
-                            src={apod.hdurl ? apod.hdurl : apod.url}
-                            alt={apod.title}
-                            className="potd"
-                        />
+                                           
+                        {apod.media_type === "image" ? (
+                            <img
+                                src={apod.hdurl ? apod.hdurl : apod.url}
+                                alt={apod.title}
+                                className="potd"
+                            />
+                        ) : apod.media_type === "video" ? (
+                            <div className="video-container">
+                                <iframe
+                                    src={apod.url}
+                                    title={apod.title}
+                                    className="potd-video"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        ) : (
+                            <p>Unsupported media type</p>
+                        )}
+
                         <div>
                             <h4 className="title">Explanation: </h4>
                             {apod.explanation}

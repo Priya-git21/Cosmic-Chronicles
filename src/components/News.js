@@ -14,13 +14,19 @@ export default class News extends Component {
 
   async componentDidMount() {
     this.setState({ loading: true });
-    await fetch('https://api.spaceflightnewsapi.net/v4/articles')
-      .then((res) => res.json())
-      .then((data) => this.setState({ news: data }));
-    this.setState({ loading: false });
+    try {
+      const response = await fetch('https://api.spaceflightnewsapi.net/v4/articles/');
+      const data = await response.json();
+
+      this.setState({ news: data.results || data || [], loading: false });
+      console.log('API Response:', data);
+    } catch (error) {
+      console.error('Failed to fetch news:', error);
+      this.setState({ loading: false });
+    }
 
     this.updateWidth();
-    window.addEventListener('resize', () => this.updateWidth());
+    window.addEventListener('resize', this.updateWidth);
   }
 
   updateWidth() {
@@ -37,7 +43,7 @@ export default class News extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', () => this.updateWidth());
+    window.removeEventListener('resize', this.updateWidth);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -65,28 +71,29 @@ export default class News extends Component {
     return (
       <div className="container my-3">
         <h1 className="font">Latest Updates</h1>
-        {/* {loading && (
+        {loading && (
           <div style={{ color: "white", fontSize: "20px" }}>Loading...</div>
-        )} */}
+        )}
 
         <div className="row">
-          {news?.map((element) => {
-            const { days, hours, minutes } = this.calculateTimeDifference(element.updatedAt);
+          {Array.isArray(news) &&
+            news.map((element) => {
+              const { days, hours, minutes } = this.calculateTimeDifference(element.updated_at);
 
-            return (
-              <div className={`col-md-${width} border-white mobile`} key={element.url}>
-                <NewsItem
-                  className="NewsItem"
-                  title={element.title}
-                  description={element.summary}
-                  images={element.imageUrl}
-                  readMore={element.url}
-                  timeDifference={{ days, hours, minutes }}
-                  isBlog="false"
-                />
-              </div>
-            );
-          })}
+              return (
+                <div className={`col-md-${width} border-white mobile`} key={element.url}>
+                  <NewsItem
+                    className="NewsItem"
+                    title={element.title}
+                    description={element.summary}
+                    images={element.image_url}
+                    readMore={element.url}
+                    timeDifference={{ days, hours, minutes }}
+                    isBlog="false"
+                  />
+                </div>
+              );
+            })}
         </div>
       </div>
     );
