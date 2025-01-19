@@ -51,7 +51,7 @@ function Launchbot() {
               <li><span className="custom-bold-text">Provider:</span> {element.provider.name}</li>
               <li><span className="custom-bold-text">Vehicle:</span> {element.vehicle.name}</li>
               <li><span className="custom-bold-text">Launch Pad:</span> {element.pad.location.statename}, {element.pad.location.country}</li>
-              <li><span className="custom-bold-text">Date:</span> {`${getMonthName(element.est_date.month)} ${element.est_date.day}, ${element.est_date.year}`}</li>
+              <li><span className="custom-bold-text">Date:</span> {`${getMonthName(element.est_date.month)} ${element.est_date.day ? element.est_date.day : ""}, ${element.est_date.year}`}</li>
               <li><span className="custom-bold-text">Mission:</span> {element.missions[0]?.name}</li>
               <li><span className="custom-bold-text">Launch Description:</span> {element.launch_description}</li>
             </ul>
