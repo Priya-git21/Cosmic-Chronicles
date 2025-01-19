@@ -14,7 +14,7 @@ export default class News extends Component {
 
   async componentDidMount() {
     this.setState({ loading: true });
-    await fetch('https://api.spaceflightnewsapi.net/v3/articles')
+    await fetch('https://api.spaceflightnewsapi.net/v4/articles')
       .then((res) => res.json())
       .then((data) => this.setState({ news: data }));
     this.setState({ loading: false });
